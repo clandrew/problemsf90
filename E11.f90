@@ -4,6 +4,7 @@
     program Exercises    
     
     ! Recommendation: use Wolfram Alpha for something that resembles human legibility for the above thing
+    implicit none
     integer :: k
     integer :: denominator
     real :: fraction

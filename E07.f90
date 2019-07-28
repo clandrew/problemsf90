@@ -1,6 +1,7 @@
 !Write a program that prints a multiplication table for numbers up to 12.
     
     program Exercises
+    implicit none
     integer :: x
     integer :: y
     

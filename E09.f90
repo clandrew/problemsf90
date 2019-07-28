@@ -3,37 +3,38 @@
 ! try if they input the same number multiple times consecutively.
     
     program Exercises
-        integer :: secretNumber
-        integer :: guess
-        integer :: lastGuess
-        integer :: numTries
+    implicit none
+    integer :: secretNumber
+    integer :: guess
+    integer :: lastGuess
+    integer :: numTries
         
-        secretNumber = 23
-        numTries = 0
-        lastGuess = 0
+    secretNumber = 23
+    numTries = 0
+    lastGuess = 0
         
-        print *, 'Please guess a number:'
+    print *, 'Please guess a number:'
         
 10      &        
-        read *, guess
+    read *, guess
         
-        if (numTries .eq. 0 .or. guess .ne. lastGuess) then
-            numTries = numTries + 1
-        end if
+    if (numTries .eq. 0 .or. guess .ne. lastGuess) then
+        numTries = numTries + 1
+    end if
         
-        lastGuess = guess
+    lastGuess = guess
         
-        if (guess .eq. secretNumber) then
-            print *, 'You got it!'
-            print '(A, I0)', 'Number of tries: ', numTries
+    if (guess .eq. secretNumber) then
+        print *, 'You got it!'
+        print '(A, I0)', 'Number of tries: ', numTries
             
-        else if (guess .lt. secretNumber) then
-            print *, 'Too low. Try again:'
-            goto 10
+    else if (guess .lt. secretNumber) then
+        print *, 'Too low. Try again:'
+        goto 10
         
-        else
-            print *, 'Too high. Try again:'
-            goto 10
+    else
+        print *, 'Too high. Try again:'
+        goto 10
         
-        end if       
-    end program
+    end if       
+end program

@@ -1,5 +1,5 @@
 # Solutions to "Simple Programming Problems" in Fortran
-This repo contains solutions to Adrian Neumann's "Simple Programming Problems" implemented in Fortran compiled using IFORT, in my own attempts to learn and gain more familiarity with the language. These aren't intended to be universal solutions, ideal solutions, or solutions that guard against all possible input errors. I'm very open to other implementation ideas and tips.
+This repo contains solutions to [Adrian Neumann's "Simple Programming Problems"](https://adriann.github.io/programming_problems.html) implemented in Fortran compiled using IFORT, in my own attempts to learn and gain more familiarity with the language. These aren't intended to be universal solutions, ideal solutions, or solutions that guard against all possible input errors. I'm very open to other implementation ideas and tips.
 
 When faced with multiple ways to do something, I tried to pick the way that was standardized, prioritizing earlier standards. The particular version of IFORT I'm using supports Fortran 2008 with a sprinkling of items from newer standards than that.
 

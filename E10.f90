@@ -1,6 +1,6 @@
 ! 10. Write a program that prints the next 20 leap years.
     
-    program Exercise
+    program Exercises
     integer :: currentYear
     integer :: count
     
@@ -37,4 +37,4 @@
         goto 10
     end if
     
-    end Program Exercise
+    end Program Exercises

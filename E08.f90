@@ -25,7 +25,7 @@
         return
     end function
     
-    program Exercise
+    program Exercises
     
     ! The type 'integer' by itself doesn't have an exact size specification, it could be a two-byte or four-byte type 
     ! depending on the compiler. To get an integer with a specific size, you use integer*2 or integer*4 (or possibly integer*8 if supported). 
@@ -40,4 +40,4 @@
         end if
     end do
     
-    end program Exercise
+    end program Exercises

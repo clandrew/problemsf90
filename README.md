@@ -8,7 +8,7 @@ These are built for x86 architecture. These are built using Intel Parallel Studi
 They're organized as a single Visual Studio project/solution. Each problem is in its own file, where all but one file is set to "not included in the build". To switch problems, disable the current one and enable the new one in the build.
 
 ## Example
-```
+```fortran
 !Write a program that prints a multiplication table for numbers up to 12.
     
     program Exercises
@@ -37,6 +37,6 @@ They're organized as a single Visual Studio project/solution. Each problem is in
     end do
     
     end program Exercises
-```
+```fortran
 
 ![Example image](https://raw.githubusercontent.com/clandrew/problemsf90/master/Images/Example.PNG "Example image.")

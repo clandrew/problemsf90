@@ -50,5 +50,7 @@
 			<FileConfiguration Name="Debug|Win32" ExcludedFromBuild="true"/></File>
 		<File RelativePath=".\E11.f90">
 			<FileConfiguration Name="Debug|Win32" ExcludedFromBuild="true"/></File></Filter>
-		<File RelativePath=".\L01.f90"/></Filter></Files>
+		<File RelativePath=".\L01.f90">
+			<FileConfiguration Name="Debug|Win32" ExcludedFromBuild="true"/></File>
+		<File RelativePath=".\L02.f90"/></Filter></Files>
 	<Globals/></VisualStudioProject>

@@ -4,15 +4,13 @@
     
     function getLargestElement$fixed4(list) result(r)
         integer, intent(in) :: list(4)
-        integer :: r, i, listSize
-        
+        integer :: r, i, listSize        
         r = list(1)
         do i=2,4
             if (list(i) > r) then
                 r = list(i)
             end if
-        end do
-        
+        end do        
     end function getLargestElement$fixed4
     
     ! Alternatively, return the largest element of an array of unbounded size.
@@ -26,11 +24,9 @@
         integer, dimension(1:), intent(in) :: list
         integer :: r
         integer :: i
-        integer :: listSize
+        integer :: listSize        
         
-        ! The size keyword is available through F90.
-        listSize = size(list)
-        
+        listSize = size(list) ! The size keyword is available through F90.        
         r = list(1)
         if (listSize .gt. 1) then
             do i=2,size(list)

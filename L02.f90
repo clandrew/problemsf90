@@ -1,33 +1,37 @@
 ! 2. Write function that reverses a list, preferably in place.
     
-    function getTotal(list) result(sum)
-        integer, dimension(1:), intent(in) :: list
-        integer :: sum
-        sum = 0
-        do i=1,size(list)
-            sum = sum + list(i)
-        end do
-    end function getTotal
+    module mod
+        ! Using a module here to provide an explicit interface. Compiler requires an explicit interface for subroutines
+        ! that have an assumed-shape array as a parameter.
+        implicit none
+        contains
+        subroutine reverse(list)
+            ! Reverses in place.
+            integer, dimension(1:) :: list
+            integer :: i
+            integer :: s
+            integer :: halfSize
+            integer :: temp
+            
+            s = size(list)
+            halfSize = s / 2
+            
+            ! Swap pairs of elements in the list.
+            do i=1,halfSize
+                temp = list(i)
+                list(i) = list(s-i+1)
+                list(s-i+1) = temp                
+            end do
+            
+        end subroutine reverse
+    end module mod
     
-    subroutine printTotal(list)
-        integer, dimension(1:), intent(in) :: list
-        integer :: sum
-        sum = 0
-        do i=1,size(list)
-            sum = sum + list(i)
-        end do
-        print '(A, I0)', 'Total: ', sum
-    end subroutine printTotal
-    
-    program P
+    program Exercises
+        use mod
         implicit none
         integer :: list(4)
-        integer :: total
-        integer :: getTotal
         
         list = (/1, 2, 5, 3/)
-        total = getTotal(list)
-        
-        call printTotal(list)
+        call reverse(list)
     
-    end program P
+    end program Exercises

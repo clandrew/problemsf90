@@ -1,6 +1,7 @@
 ! Write a function that returns the elements on odd positions in a list.
     
     module mod
+        ! Returning of array requires explicit interface; module is a way to easily have that.
         implicit none
         contains
         function test(list) result(r)

@@ -1,10 +1,15 @@
-! Write a function that returns the elements on odd positions in a list.
+! Write a function that returns the elements on odd positions in a list.  
     
-    module mod
-        ! Returning of array requires explicit interface; module is a way to easily have that.
+    program Exercises
         implicit none
+        integer :: list(5)
+        integer :: odd(3)
+        
+        list = (/6, 2, 1, 10, 5/)
+        odd = getOddPositionElements(list)        
+        
         contains
-        function test(list) result(r)
+        function getOddPositionElements(list) result(r)
             integer, dimension(1:), intent(in) :: list
             integer, dimension(1:(size(list)+1)/2) :: r
             integer :: i
@@ -18,16 +23,6 @@
                 end if
             end do
             
-        end function test
-    end module mod
-    
-    program Exercises
-        use mod
-        implicit none
-        integer :: list(5)
-        integer :: odd(3)
-        
-        list = (/6, 2, 1, 10, 5/)
-        odd = test(list)        
+        end function getOddPositionElements
     
     end program Exercises

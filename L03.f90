@@ -1,24 +1,6 @@
 ! 3. Write a function that checks whether an element occurs in a list.
     
-    function listContains(list, x) result(r)
-        integer, dimension(1:), intent(in) :: list
-        integer, intent(in) :: x
-        logical :: r
-        integer :: i
-        
-        do i=1,size(list)
-            if (list(i) == x) then
-                r = .true.
-                return
-            end if
-        end do
-        
-        r = .false.
-    
-    end function listContains
-    
     program Exercises
-        logical :: listContains
         integer :: list(4)
         logical :: r
         
@@ -30,5 +12,24 @@
         else
             print *, 'The list doesn''t contain the number.' ! Escape apostrophe literal with two apostrophes.
         end if
+        
+        contains
+
+        function listContains(list, x) result(r)
+            integer, dimension(1:), intent(in) :: list
+            integer, intent(in) :: x
+            logical :: r
+            integer :: i
+        
+            do i=1,size(list)
+                if (list(i) == x) then
+                    r = .true.
+                    return
+                end if
+            end do
+        
+            r = .false.
+    
+        end function listContains    
         
     end program Exercises

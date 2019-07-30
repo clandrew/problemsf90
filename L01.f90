@@ -1,6 +1,22 @@
 ! 1. Write a function that returns the largest element in a list.
     
     !This program has two solutions- one with a bounded list, and one with an unbounded one.
+        
+    program Exercises
+    implicit none
+    integer :: list4(4)
+    integer :: list(10);
+    integer :: largestElement
+    
+    list4 = (/ 23, 75, 198, 3 /)
+    largestElement = getLargestElement$fixed4(list4)
+    print '(A, I0)', 'The largest element in the first list is: ', largestElement
+    
+    list = (/ 3, 215, 9, 5, 88, 22, 545, 3, 7, 1 /)
+    largestElement = getLargestElement$unbounded(list)    
+    print '(A, I0)', 'The largest element is in the second list is: ', largestElement
+    
+    contains    
     
     function getLargestElement$fixed4(list) result(r)
         integer, intent(in) :: list(4)
@@ -37,21 +53,5 @@
         end if
                 
     end function getLargestElement$unbounded
-    
-    program Exercises
-    implicit none
-    integer :: list4(4)
-    integer :: list(10);
-    integer :: getLargestElement$fixed4
-    integer :: getLargestElement$unbounded
-    integer :: largestElement
-    
-    list4 = (/ 23, 75, 198, 3 /)
-    largestElement = getLargestElement$fixed4(list4)
-    print '(A, I0)', 'The largest element in the first list is: ', largestElement
-    
-    list = (/ 3, 215, 9, 5, 88, 22, 545, 3, 7, 1 /)
-    largestElement = getLargestElement$unbounded(list)    
-    print '(A, I0)', 'The largest element is in the second list is: ', largestElement
     
     end program Exercises

@@ -1,9 +1,12 @@
 ! 2. Write function that reverses a list, preferably in place.
-    
-    module mod
-        ! Using a module here to provide an explicit interface. Compiler requires an explicit interface for subroutines
-        ! that have an assumed-shape array as a parameter.
+        
+    program Exercises
         implicit none
+        integer :: list(4)
+        
+        list = (/1, 2, 5, 3/)
+        call reverse(list)        
+        
         contains
         subroutine reverse(list)
             ! Reverses in place.
@@ -24,14 +27,5 @@
             end do
             
         end subroutine reverse
-    end module mod
-    
-    program Exercises
-        use mod
-        implicit none
-        integer :: list(4)
-        
-        list = (/1, 2, 5, 3/)
-        call reverse(list)
     
     end program Exercises

@@ -1,4 +1,4 @@
-!Write a program that prints a multiplication table for numbers up to 12.
+!7. Write a program that prints a multiplication table for numbers up to 12.
     
     program Exercises
     implicit none

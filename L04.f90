@@ -1,4 +1,4 @@
-! Write a function that returns the elements on odd positions in a list.  
+! 4. Write a function that returns the elements on odd positions in a list.  
     
     program Exercises
         implicit none
